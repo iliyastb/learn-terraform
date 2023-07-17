@@ -3,7 +3,6 @@ data "aws_ami" "ami" {
   name_regex = "Centos-8-DevOps-Practice"
   owners = ["number"]
 }
-
 output "ami_id" {
   value = data.aws_ami.ami.image_id
 }
