@@ -12,6 +12,6 @@ output "tfvars" {
 }
 #cli variable
 variable "cli" {}
-output "cli" {
+output "cli_var" {
   value = var.cli
 }
