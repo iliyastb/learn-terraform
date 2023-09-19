@@ -10,8 +10,9 @@ variable "tfvars" {}
 output "tfvars" {
   value = var.tfvars
 }
-#cli variable
+# cli variable
 variable "cli" {}
-output "cli_var" {
+output "cli" {
   value = var.cli
 }
+# shell env variable, export TF_ENV cli="hello"
