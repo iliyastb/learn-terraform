@@ -15,4 +15,6 @@ variable "cli" {}
 output "cli" {
   value = var.cli
 }
-# shell env variable, export TF_ENV cli="hello"
+# shell env variable, export TF_VAR_cli="hello"
+
+variable "input" {}
