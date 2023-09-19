@@ -1,0 +1,1 @@
+tfvars = "Hello from tfvars auto"
