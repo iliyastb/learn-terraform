@@ -18,3 +18,6 @@ output "cli" {
 # shell env variable, export TF_VAR_cli="hello"
 
 variable "input" {}
+output "input" {
+  value = input
+}
