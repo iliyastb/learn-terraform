@@ -1,6 +1,6 @@
 # default variable
 variable "sample" {
-  default = "testing variable"
+  default = "default variable"
 }
 output "sample" {
   value = var.sample
