@@ -1,6 +1,6 @@
 # default variable
 variable "sample" {
-  default = 10
+  default = "testing variable"
 }
 output "sample" {
   value = var.sample
@@ -9,4 +9,9 @@ output "sample" {
 variable "tfvars" {}
 output "tfvars" {
   value = var.tfvars
+}
+#cli variable
+variable "cli" {}
+output "cli_var" {
+  value = "var.cli"
 }
