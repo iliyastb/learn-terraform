@@ -5,18 +5,22 @@ variable "sample" {
 output "sample" {
   value = var.sample
 }
+
 # tfvars - auto tfvars is the first priority
 variable "tfvars" {}
 output "tfvars" {
   value = var.tfvars
 }
-# cli variable
+
+# variable declared with cli
 variable "cli" {}
 output "cli" {
   value = var.cli
 }
+
 # shell env variable, export TF_VAR_cli="hello"
 
+# cli asking for variable declaration
 variable "input" {}
 output "input" {
   value = var.input
