@@ -5,13 +5,13 @@ variable "sample" {
 output "sample" {
   value = var.sample
 }
-# tfvars variable
+# tfvars - auto tfvars is the first priority
 variable "tfvars" {}
 output "tfvars" {
   value = var.tfvars
 }
 #cli variable
 variable "cli" {}
-output "cli" {
-  value = "var.cli"
+output "cli_var" {
+  value = var.cli
 }
