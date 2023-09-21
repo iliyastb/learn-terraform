@@ -7,10 +7,11 @@ variable "sample" {
     fruits = {
       apple   = 5
       orange = 5
+      banana = false
     }
   }
 }
 
-output "sample5" {
-  value = var.sample.fruits
+output "sample" {
+  value = var.sample.fruits.banana
 }
