@@ -20,16 +20,16 @@ resource "null_resource" "nothing2" {
 variable "loop3" {
   default = {
     apple = {
-      name = "iliyas"
+      name = "apple"
       count = 2
     }
     banana = {
-      name = "purna"
+      name = "banana"
       count = 2
     }
   }
 }
 
-resource "null_resource" "loop3" {
+resource "null_resource" "nothing3" {
   for_each = var.loop3
 }
