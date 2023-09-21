@@ -1,4 +1,3 @@
-# This is the testing of the code
-
-resource "aws_instance" "ec2" {
+# This is the testing of the tf code
+resource "null_resource" "null" {
 }
