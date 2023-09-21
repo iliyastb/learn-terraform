@@ -2,7 +2,7 @@
 resource "null_resource" "null" {
 }
 
-variable "sample5" {
+variable "sample" {
   default = {
     fruits = {
       apple   = 5
@@ -12,5 +12,5 @@ variable "sample5" {
 }
 
 output "sample5" {
-  value = var.sample5.value.fruits[0]
+  value = var.sample.index[0]
 }
