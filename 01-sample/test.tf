@@ -12,5 +12,5 @@ variable "sample" {
 }
 
 output "sample5" {
-  value = var.sample.value[fruits[apple]]
+  value = var.sample.each.value[fruits]
 }
