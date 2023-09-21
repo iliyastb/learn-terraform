@@ -6,11 +6,11 @@ variable "sample" {
   default = {
     fruits = {
       apple   = 5
-      oranges = 5
+      orange = 5
     }
   }
 }
 
 output "sample5" {
-  value = var.sample.fruits[1]
+  value = var.sample.fruits.orange
 }
