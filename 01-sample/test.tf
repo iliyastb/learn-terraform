@@ -12,5 +12,5 @@ variable "sample" {
 }
 
 output "sample5" {
-  value = var.sample.index[0]
+  value = var.sample
 }
