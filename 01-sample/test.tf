@@ -12,11 +12,11 @@ output "ami" {
   value = data.aws_ami.ami.image_id
 }
 
-#resource "aws_instance" "sample" {
-#  ami = "ami-03265a0778a880afb"
-#  instance_type = "t2.micro"
-#
-#  tags = {
-#    name = "sample"
-#  }
-#}
+resource "aws_instance" "sample" {
+  ami = data.aws_ami.ami.id
+  instance_type = "t2.micro"
+
+  tags = {
+    name = "sample"
+  }
+}
