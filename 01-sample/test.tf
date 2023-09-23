@@ -8,10 +8,6 @@ data "aws_ami" "ami" {
   owners = ["973714476881"]
 }
 
-output "ami" {
-  value = data.aws_ami.ami.image_id
-}
-
 resource "aws_instance" "sample" {
   ami = data.aws_ami.ami.id
   instance_type = "t2.micro"
