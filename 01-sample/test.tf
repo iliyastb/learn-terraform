@@ -8,11 +8,11 @@ data "aws_ami" "ami" {
   owners = [860050401100]
 }
 
-resource "aws_instance" "sample" {
-  ami = data.aws_ami.ami.image_id
-  instance_type = "t2.micro"
-
-  tags = {
-    name = "sample"
-  }
-}
+#resource "aws_instance" "sample" {
+#  ami = data.aws_ami.ami.image_id
+#  instance_type = "t2.micro"
+#
+#  tags = {
+#    name = "sample"
+#  }
+#}
