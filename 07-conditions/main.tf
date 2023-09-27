@@ -22,7 +22,7 @@ resource "aws_instance" "sample1" {
   ami           = data.aws_ami.ami.id
   instance_type = var.instance_type == "" ? "t2.micro" : var.instance_type
 
-  count = tabool(var.instance_type) ? 1 : 0
+  count = tobool(var.instance_type) ? 1 : 0
 
   tags = {
     Name = "sample1"
