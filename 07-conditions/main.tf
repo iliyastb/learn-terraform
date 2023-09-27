@@ -5,7 +5,7 @@ data "aws_ami" "ami" {
   owners      = ["973714476881"]
 }
 
-# resource block to create the ec2 instance with condition
+# resource block to create the ec2 instance, condition with string
 resource "aws_instance" "sample" {
   ami           = data.aws_ami.ami.id
   instance_type = var.instance_type == "" ? "t2.micro" : var.instance_type
@@ -17,14 +17,16 @@ resource "aws_instance" "sample" {
 
 variable "instance_type" {}
 
-# resource block to create the ec2 instance with condition with boolean
+# resource block to create the ec2 instance, condition with boolean
 resource "aws_instance" "sample1" {
   ami           = data.aws_ami.ami.id
   instance_type = var.instance_type == "" ? "t2.micro" : var.instance_type
 
-  count = tobool(var.instance_type) ? 1 : 0
+  count = tobool(var.instance_type1) ? 1 : 0
 
   tags = {
     Name = "sample1"
   }
 }
+
+variable "instance_type1" {}
