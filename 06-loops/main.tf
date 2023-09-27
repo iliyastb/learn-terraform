@@ -20,11 +20,11 @@ resource "null_resource" "nothing2" {
 variable "loop3" {
   default = {
     apple = {
-      name = "apple"
+      name  = "apple"
       count = 2
     }
     banana = {
-      name = "banana"
+      name  = "banana"
       count = 2
     }
   }
@@ -32,4 +32,8 @@ variable "loop3" {
 
 resource "null_resource" "nothing3" {
   for_each = var.loop3
+}
+
+output "FRUITS" {
+  value = [for i in var.loop2 : upper(i)]
 }
