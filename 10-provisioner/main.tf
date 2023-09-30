@@ -7,8 +7,8 @@ data "aws_ami" "ami" {
 
 # resource creation with provisioner
 resource "aws_instance" "test" {
-  ami = data.aws_ami.ami.id
-  instance_type = "t2.micro"
+  ami                    = data.aws_ami.ami.id
+  instance_type          = "t2.micro"
   vpc_security_group_ids = ["sg-0f1959ab92bc12167"]
 
   tags = {
@@ -19,13 +19,13 @@ resource "aws_instance" "test" {
   provisioner "remote-exec" {
 
     connection {
-      host = "self.public_ip"
-      user = "root"
+      host     = self.public_ip
+      user     = "root"
       password = "DevOps321"
     }
 
     inline = [
-      "echo iliyas"
+      "echo hi"
     ]
   }
 }
