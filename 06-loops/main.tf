@@ -1,4 +1,4 @@
-# count
+# number of
 variable "loop1" {
   default = 3
 }
@@ -7,7 +7,7 @@ resource "null_resource" "nothing1" {
   count = var.loop1
 }
 
-# list, length
+# list, count, length
 variable "loop2" {
   default = ["orange", "banana"]
 }
@@ -34,6 +34,7 @@ resource "null_resource" "nothing3" {
   for_each = var.loop3
 }
 
+# for expression
 output "FRUITS" {
   value = [for i in var.loop2 : upper(i)]
 }
