@@ -31,3 +31,7 @@ variable "instances" {
 output "ip" {
   value = [for k, v in aws_instance.frontend : "${k} - ${v.public_ip}"]
 }
+
+output "only_ip" {
+  value = [for k, v in aws_instance.frontend : v.public_ip]
+}
