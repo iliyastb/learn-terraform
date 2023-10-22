@@ -1,1 +1,1 @@
-tfvars = "Hello from tfvars auto"
+tfvars = "Hello from tfvars Auto"
