@@ -36,5 +36,5 @@ resource "null_resource" "nothing3" {
 
 # for expression
 output "FRUITS" {
-  value = [for i in var.loop2 : upper(i)]
+  value = [for v in var.loop2 : upper(v)]
 }
