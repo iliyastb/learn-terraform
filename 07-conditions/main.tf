@@ -6,18 +6,18 @@ data "aws_ami" "ami" {
 }
 
 # resource block to create the ec2 instance, condition with string.
-resource "aws_instance" "sample" {
-  ami           = data.aws_ami.ami.id
-  instance_type = var.instance_type == "" ? "t2.micro" : var.instance_type
-
-  tags = {
-    Name = "sample"
-  }
-}
+#resource "aws_instance" "sample" {
+#  ami           = data.aws_ami.ami.id
+#  instance_type = var.instance_type == "" ? "t2.micro" : var.instance_type
+#
+#  tags = {
+#    Name = "sample"
+#  }
+#}
 
 variable "instance_type" {}
 
-# resource block to create the ec2 instance, condition with boolean.
+# resource block to create the ec2 instance, condition with boolean function.
 resource "aws_instance" "sample1" {
   ami           = data.aws_ami.ami.id
   instance_type = var.instance_type == "" ? "t2.micro" : var.instance_type
