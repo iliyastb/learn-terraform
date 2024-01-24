@@ -16,7 +16,7 @@ resource "aws_instance" "frontend" {
 }
 
 variable "instances" {
-  default = ["frontend", "catalogue", "user", "cart"]
+  default = ["frontend", "catalogue"]
 }
 
 output "ip" {
