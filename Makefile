@@ -1,2 +1,2 @@
 apply:
-	cd 04-vars/
+	cd 04-vars
