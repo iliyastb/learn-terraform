@@ -1,3 +1,2 @@
 apply:
-	git pull
 	ls
