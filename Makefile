@@ -1,5 +1,5 @@
 git:
-	git pull
+	#git pull
 	cd learn-terraform/
 	cd 04-vars/
 apply:git
