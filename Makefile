@@ -1,3 +1,4 @@
 apply:
 	cd 04-vars/
-	ls
+	terraform init
+	terraform apply -auto-approve
