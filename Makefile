@@ -1,3 +1,3 @@
 apply:
-	cd 04-vars
+	cd 06-loops
 	terraform init
