@@ -4,10 +4,10 @@ data "aws_ami" "ami" {
   owners      = ["973714476881"]
 }
 
-resource "aws_instance" "frontend" {
+resource "aws_instance" "instances" {
   ami                    = data.aws_ami.ami.id
   instance_type          = var.instance_type
-  vpc_security_group_ids = [var.sg_id]
+  vpc_security_group_ids = var.sg_id
 
   tags = {
     Name = var.component
