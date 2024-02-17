@@ -7,6 +7,7 @@ resource "aws_spot_instance_request" "node1" {
     Name = "prom-server"
   }
 }
+
 resource "aws_spot_instance_request" "node2" {
   ami           = "ami-072aa986009d7d8af"
   instance_type = "t3.micro"
@@ -22,6 +23,7 @@ resource "aws_ec2_tag" "tag1" {
   key         = "Name"
   value       = "prom-server"
 }
+
 resource "aws_ec2_tag" "tag2" {
   resource_id = aws_spot_instance_request.node2
   key         = "Name"
