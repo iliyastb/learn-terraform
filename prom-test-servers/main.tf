@@ -17,12 +17,12 @@ resource "aws_spot_instance_request" "node2" {
   }
 }
 
-resource "aws_ec2_tag" "tag" {
+resource "aws_ec2_tag" "tag1" {
   resource_id = aws_spot_instance_request.node1
   key         = "Name"
   value       = "prom-server"
 }
-resource "aws_ec2_tag" "tag" {
+resource "aws_ec2_tag" "tag2" {
   resource_id = aws_spot_instance_request.node2
   key         = "Name"
   value       = "prom-server"
