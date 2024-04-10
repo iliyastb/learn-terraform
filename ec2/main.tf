@@ -7,7 +7,7 @@ data "aws_ami" "ami" {
 
 # resource block to create the ec2 instance.
 resource "aws_instance" "sample" {
-  count = 1
+  count         = 1
   ami           = data.aws_ami.ami.id
   instance_type = "t2.micro"
 
