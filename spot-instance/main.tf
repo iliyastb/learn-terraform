@@ -1,6 +1,6 @@
 resource "aws_spot_instance_request" "instance" {
   ami           = "ami-072aa986009d7d8af"
-  instance_type = "t3.medium"
+  instance_type = "t3.small"
   vpc_security_group_ids = ["sg-0f1959ab92bc12167"]
   wait_for_fulfillment = true
 
