@@ -40,7 +40,7 @@
 #  type    = "A"
 #  ttl     = 30
 #  records = [aws_instance.instances.private_ip]
-#  zone_id = "Z0519871SX8ZUH6ORUV5"
+#  zone_id = "Z02331073VKZYZLSD9FII"
 #}
 #
 #resource "null_resource" "provisioner" {

@@ -3,7 +3,7 @@ resource "aws_route53_record" "r53" {
   type    = "A"
   ttl     = 30
   records = [var.private_ip]
-  zone_id = "Z0519871SX8ZUH6ORUV5"
+  zone_id = "Z02331073VKZYZLSD9FII"
 }
 
 variable "component" {}
