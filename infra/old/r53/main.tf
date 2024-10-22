@@ -1,5 +1,5 @@
 resource "aws_route53_record" "r53" {
-  name    = "${var.component}.devtb.online"
+  name    = "${var.component}.devtb.in.net"
   type    = "A"
   ttl     = 30
   records = [var.private_ip]

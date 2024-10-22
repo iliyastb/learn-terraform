@@ -1,5 +1,5 @@
 resource "aws_route53_record" "pr53" {
-  name    = "devtb.online"
+  name    = "devtb.in.net"
   type    = "A"
   ttl     = 30
   records = [var.public_ip]
